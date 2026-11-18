@@ -37,31 +37,31 @@ jobs:
       run: git clone https://github.com/Maf1sher/Mantle-NeoForge && git clone https://github.com/Maf1sher/TinkersConstruct-NeoForge && git clone https://github.com/Maf1sher/tinkers-levelling-addon-NeoForge
 
     - name: Build Mantle
-      run: cd Mantle-Neoforge && chmod +x ./gradlew && ./gradlew build
+      run: cd Mantle-NeoForge && chmod +x ./gradlew && ./gradlew build
 
     - name: Build TC3
-      run: cd TinkersConstruct-Neoforge && chmod +x ./gradlew && ./gradlew build
+      run: cd TinkersConstruct-NeoForge && chmod +x ./gradlew && ./gradlew build
 
     - name: Build This
-      run: cd tinkers-levelling-addon-Neoforge && chmod +x ./gradlew && ./gradlew build
+      run: cd tinkers-levelling-addon-NeoForge && chmod +x ./gradlew && ./gradlew build
 
     - name: Upload Mantle
       uses: actions/upload-artifact@v7.0.2
       with:
         name: Mantle
-        path: Mantle-Neoforge/build/libs/*.jar
+        path: Mantle-NeoForge/build/libs/*.jar
 
     - name: Upload TC3
       uses: actions/upload-artifact@v7.0.2
       with:
         name: TC3
-        path: TinkersConstruct-Neoforge/build/libs/*.jar
+        path: TinkersConstruct-NeoForge/build/libs/*.jar
 
     - name: Upload This
       uses: actions/upload-artifact@v7.0.2
       with:
         name: Mantle
-        path: tinkers-levelling-addon-Neoforge/build/libs/*.jar
+        path: tinkers-levelling-addon-NeoForge/build/libs/*.jar
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
